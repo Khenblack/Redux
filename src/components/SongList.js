@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { selectSong } from '../actions';
 
 class SongList extends Component {
-
   renderList() {
     return this.props.songs.map(song => {
       return (
@@ -23,7 +22,6 @@ class SongList extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className='ui divided list'>
         {this.renderList()}
@@ -33,7 +31,7 @@ class SongList extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { songs: state.songs, selectedSong: state.selectedSong };
+  return { songs: state.songs };
 }
 
 const mapDispatchToProps = (dispatch) => {
